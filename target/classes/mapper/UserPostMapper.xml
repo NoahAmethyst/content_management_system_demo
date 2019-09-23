@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="amethyst.mapper.UserPostMapper">
+    <resultMap id="UserPostResult" type="amethyst.po.sys.UserPost" >
+        <id column="user_id" property="userId"/><!-- 用户ID -->
+        <id column="post_id" property="postId"/><!-- 角色ID -->
+    </resultMap>
+
+    <sql id="selectUserPostVo">
+        select user_id,post_id from sys_user_post
+    </sql>
+
+    <select id="selectUserPostList" parameterType="UserRole" resultMap="UserPostResult">
+        <include refid="selectUserPostVo"/>
+        <where>
+            <if test="userId != null"> and user_id = #{userId}</if>
+            <if test="postId != null"> and post_id = #{postId}</if>
+        </where>
+    </select>
+
+    <select id="selectUserPostById" parameterType="Long" resultMap="UserPostResult">
+        <include refid="selectUserPostVo"/>
+        where user_id = #{userId}
+    </select>
+
+    <insert id="insertUserPost" parameterType="amethyst.po.sys.UserPost">
+        insert into sys_user_post
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null"> user_id,</if>
+            <if test="postId != null"> post_id,</if>
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null"> #{userId},</if>
+            <if test="postId != null"> #{postId},</if>
+        </trim>
+    </insert>
+    
+    <update id="updateUserPost" parameterType="amethyst.po.sys.UserPost">
+        update sys_user_post
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="postId != null ">post_id = #{postId},</if>
+        </trim>
+        where user_id = #{userId}
+    </update>
+
+    <delete id="deleteUserPostById" parameterType="Long">
+        delete from sys_user_post where user_id = #{userId}
+    </delete>
+    
+    <delete id="deleteUserPostByIds" parameterType="String">
+        delete from sys_user_post where user_id in
+        <foreach item="userId" collection="array" open="(" separator="," close=")">
+            #{userId}
+        </foreach>
+    </delete>
+
+</mapper>

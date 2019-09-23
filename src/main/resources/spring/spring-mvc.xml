@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+    depends-on="lifecycleBeanPostProcessor">
+    <property name="proxyTargetClass" value="true"></property>
+</bean>
+
+
+    <!-- 启用shiro注解：固定写法 -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor"/>
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+    <!--    扫描包-->
+    <context:component-scan base-package="amethyst.controller"/>
+
+    <!--    请求适配器和请求映射器-->
+    <mvc:annotation-driven/>
+   <!-- <mvc:annotation-driven conversion-service="conversionService">
+        <mvc:message-converters>
+            <ref bean="fastjsonBean"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>-->
+
+<!--   格式化  -->
+<!--    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
+<!--        <property name="converters">-->
+<!--            <list>-->
+<!--                <bean class="amethyst.convert.StringToDateConverter"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    消息转化-->
+    <!--使用fastjson-->
+    <!--<bean id="fastjsonBean" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+                <value>application/json;charset=UTF-8</value>
+            </list>
+        </property>
+        <property name="fastJsonConfig">
+            <bean class="com.alibaba.fastjson.support.config.FastJsonConfig">
+                <property name="features">
+                    <list>
+                        <value>AllowArbitraryCommas</value>
+                        <value>AllowUnQuotedFieldNames</value>
+                        <value>DisableCircularReferenceDetect</value>
+                    </list>
+                </property>
+               <!-             出参-->
+<!--                <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    &lt;!&ndash;   视图解析器&ndash;&gt;-->
+<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--        <property name="prefix" value="/WEB-INF/pages/"/>-->
+<!--        <property name="suffix" value=".html"/>-->
+<!--    </bean>-->
+
+    thymeleaf 视图处理器配置
+        <bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+            <property name="prefix" value="/WEB-INF/templates/" />
+            <property name="suffix" value=".html" />
+            <property name="templateMode" value="HTML5" />
+            <property name="characterEncoding" value="UTF-8"/>
+        </bean>
+            <bean id="templateEngine"  class="org.thymeleaf.spring4.SpringTemplateEngine">
+                <property name="templateResolver" ref="templateResolver" />
+                <property name="additionalDialects">
+            <set>
+                    <bean class="at.pollux.thymeleaf.shiro.dialect.ShiroDialect"/>
+                </set>
+        </property>
+            </bean>
+            <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="templateEngine" />
+        <property name="characterEncoding" value="UTF-8"/>
+    </bean>
+
+
+    <!--    静态资源-->
+    <mvc:default-servlet-handler/>
+    <mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
+    <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
+    <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
+    <mvc:resources mapping="/fonts/**" location="/WEB-INF/fonts/"/>
+
+    <!--    文件上传-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSizePerFile" value="1024000"/>
+    </bean>
+
+    <!--    全局异常处理-->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!--        把异常消息放在errMsg属性，在页面${errMsg}打印出来-->
+        <property name="exceptionAttribute" value="errMsg"/>
+        <property name="exceptionMappings">
+            <props>
+                <!--               如果有Exception异常，则跳转到error视图-->
+                <prop key="java.lang.Exception">error</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--kaptcha登录验证码 -->
+    <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <props>
+                        <prop key="kaptcha.border">no</prop>
+                        <prop key="kaptcha.border.color">105,179,90</prop>
+                        <prop key="kaptcha.textproducer.font.color">red</prop>
+                        <prop key="kaptcha.image.width">200</prop>
+                        <prop key="kaptcha.textproducer.font.size">48</prop>
+                        <prop key="kaptcha.image.height">48</prop>
+                        <prop key="kaptcha.session.key">code</prop>
+                        <prop key="kaptcha.textproducer.char.string">123456789</prop>
+                        <prop key="kaptcha.textproducer.char.length">4</prop>
+                        <prop key="kaptcha.textproducer.char.space">6</prop>
+                        <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+                        <prop key="kaptcha.obscurificator.impl">com.google.code.kaptcha.impl.WaterRipple</prop>
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+
+
+</beans>

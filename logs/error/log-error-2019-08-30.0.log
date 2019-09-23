@@ -1,0 +1,43 @@
+2019-08-30 08:36:32.076 [http-bio-8080-exec-10] ERROR amethyst.controller.sys.UserController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+### The error may exist in file [C:\Test\SSM\target\classes\mapper\UserMapper.xml]
+### The error may involve amethyst.mapper.UserMapper.selectUserList
+### The error occurred while handling results
+### SQL: SELECT user_id, dept_id, login_name, user_name, user_type, email, phonenumber, sex, avatar, password, salt, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark FROM sys_user order by user_id desc LIMIT ?
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+2019-08-30 08:43:01.182 [http-bio-8080-exec-6] ERROR amethyst.controller.sys.UserController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+### The error may exist in file [C:\Test\SSM\target\classes\mapper\UserMapper.xml]
+### The error may involve amethyst.mapper.UserMapper.selectUserList
+### The error occurred while handling results
+### SQL: SELECT user_id, dept_id, login_name, user_name, user_type, email, phonenumber, sex, avatar, password, salt, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark FROM sys_user order by user_id desc LIMIT ?
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+2019-08-30 09:48:47.435 [http-bio-8080-exec-9] ERROR amethyst.controller.sys.UserController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+### The error may exist in file [C:\Test\SSM\target\classes\mapper\UserMapper.xml]
+### The error may involve amethyst.mapper.UserMapper.selectUserList
+### The error occurred while handling results
+### SQL: SELECT user_id, dept_id, login_name, user_name, user_type, email, phonenumber, sex, avatar, password, salt, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark FROM sys_user order by user_id desc LIMIT ?
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+2019-08-30 09:53:45.492 [http-bio-8080-exec-3] ERROR amethyst.controller.sys.UserController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+### The error may exist in file [C:\Test\SSM\target\classes\mapper\UserMapper.xml]
+### The error may involve amethyst.mapper.UserMapper.selectUserList
+### The error occurred while handling results
+### SQL: SELECT user_id, dept_id, login_name, user_name, user_type, email, phonenumber, sex, avatar, password, salt, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark FROM sys_user order by user_id desc LIMIT ?
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+2019-08-30 09:55:29.344 [http-bio-8080-exec-1] ERROR amethyst.controller.sys.UserController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+### The error may exist in file [C:\Test\SSM\target\classes\mapper\UserMapper.xml]
+### The error may involve amethyst.mapper.UserMapper.selectUserList
+### The error occurred while handling results
+### SQL: SELECT user_id, dept_id, login_name, user_name, user_type, email, phonenumber, sex, avatar, password, salt, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark FROM sys_user order by user_id desc LIMIT ?
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+2019-08-30 10:03:28.398 [http-bio-8080-exec-4] ERROR amethyst.controller.sys.UserController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+### The error may exist in file [C:\Test\SSM\target\classes\mapper\UserMapper.xml]
+### The error may involve amethyst.mapper.UserMapper.selectUserList
+### The error occurred while handling results
+### SQL: SELECT user_id, dept_id, login_name, user_name, user_type, email, phonenumber, sex, avatar, password, salt, status, del_flag, login_ip, login_date, create_by, create_time, update_by, update_time, remark FROM sys_user order by user_id desc LIMIT ?
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for amethyst.mapper.sys.DeptMapper.selectDeptById
+2019-08-30 10:22:59.712 [http-bio-8080-exec-9] ERROR amethyst.controller.sys.UserController - org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'startTime' in 'class amethyst.po.sys.User'

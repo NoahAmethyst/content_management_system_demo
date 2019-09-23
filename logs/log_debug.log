@@ -1,0 +1,193 @@
+2019-09-19 14:35:14.364 [localhost-startStop-1] DEBUG o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext
+2019-09-19 14:35:14.901 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\DeptServiceImpl.class]
+2019-09-19 14:35:14.903 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\DictDataServiceImpl.class]
+2019-09-19 14:35:14.905 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\MenuServiceImpl.class]
+2019-09-19 14:35:14.908 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\PostServiceImpl.class]
+2019-09-19 14:35:14.909 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\RoleDeptServiceImpl.class]
+2019-09-19 14:35:14.910 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\RoleMenuServiceImpl.class]
+2019-09-19 14:35:14.911 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\RoleServiceImpl.class]
+2019-09-19 14:35:14.912 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\ServicePermission.class]
+2019-09-19 14:35:14.913 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\UserPostServiceImpl.class]
+2019-09-19 14:35:14.913 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\UserRoleServiceImpl.class]
+2019-09-19 14:35:14.914 [localhost-startStop-1] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\service\impl\UserServiceImpl.class]
+2019-09-19 14:35:15.007 [localhost-startStop-1] DEBUG o.s.beans.factory.xml.XmlBeanDefinitionReader - Loaded 3 bean definitions from class path resource [spring/spring-mybatis.xml]
+2019-09-19 14:35:15.075 [localhost-startStop-1] DEBUG o.s.beans.factory.xml.XmlBeanDefinitionReader - Loaded 5 bean definitions from class path resource [spring/spring-transaction.xml]
+2019-09-19 14:35:15.100 [localhost-startStop-1] DEBUG o.s.beans.factory.xml.XmlBeanDefinitionReader - Loaded 10 bean definitions from class path resource [spring/spring-shiro.xml]
+2019-09-19 14:35:15.121 [localhost-startStop-1] DEBUG o.s.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from class path resource [spring/spring-redis.xml]
+2019-09-19 14:35:15.121 [localhost-startStop-1] DEBUG o.s.beans.factory.xml.XmlBeanDefinitionReader - Loaded 41 bean definitions from class path resource [spring/spring-service.xml]
+2019-09-19 14:35:15.251 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2019-09-19 14:35:15.386 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2019-09-19 14:35:15.484 [localhost-startStop-1] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-09-19 14:35:15.492 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\DeptMapper.class]
+2019-09-19 14:35:15.493 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\DictDataMapper.class]
+2019-09-19 14:35:15.493 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\MenuMapper.class]
+2019-09-19 14:35:15.493 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\PostMapper.class]
+2019-09-19 14:35:15.493 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\RoleDeptMapper.class]
+2019-09-19 14:35:15.493 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\RoleMapper.class]
+2019-09-19 14:35:15.493 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\RoleMenuMapper.class]
+2019-09-19 14:35:15.493 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\UserMapper.class]
+2019-09-19 14:35:15.495 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\UserPostMapper.class]
+2019-09-19 14:35:15.495 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\content_management_system\target\classes\amethyst\mapper\UserRoleMapper.class]
+2019-09-19 14:35:15.497 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'deptMapper' and 'amethyst.mapper.DeptMapper' mapperInterface
+2019-09-19 14:35:15.497 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'dictDataMapper' and 'amethyst.mapper.DictDataMapper' mapperInterface
+2019-09-19 14:35:15.497 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'menuMapper' and 'amethyst.mapper.MenuMapper' mapperInterface
+2019-09-19 14:35:15.497 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'postMapper' and 'amethyst.mapper.PostMapper' mapperInterface
+2019-09-19 14:35:15.500 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'roleDeptMapper' and 'amethyst.mapper.RoleDeptMapper' mapperInterface
+2019-09-19 14:35:15.501 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'roleMapper' and 'amethyst.mapper.RoleMapper' mapperInterface
+2019-09-19 14:35:15.501 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'roleMenuMapper' and 'amethyst.mapper.RoleMenuMapper' mapperInterface
+2019-09-19 14:35:15.501 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'amethyst.mapper.UserMapper' mapperInterface
+2019-09-19 14:35:15.501 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userPostMapper' and 'amethyst.mapper.UserPostMapper' mapperInterface
+2019-09-19 14:35:15.501 [localhost-startStop-1] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userRoleMapper' and 'amethyst.mapper.UserRoleMapper' mapperInterface
+2019-09-19 14:35:15.503 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2019-09-19 14:35:15.525 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/jdbc.driverClassName]
+2019-09-19 14:35:15.527 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/jdbc.driverClassName] not found - trying original name [jdbc.driverClassName]. javax.naming.NameNotFoundException: Name [jdbc.driverClassName] is not bound in this Context. Unable to find [jdbc.driverClassName].
+2019-09-19 14:35:15.527 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [jdbc.driverClassName]
+2019-09-19 14:35:15.528 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [jdbc.driverClassName] threw NamingException with message: Name [jdbc.driverClassName] is not bound in this Context. Unable to find [jdbc.driverClassName].. Returning null.
+2019-09-19 14:35:15.528 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'jdbc.driverClassName' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.528 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/jdbc.url]
+2019-09-19 14:35:15.528 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/jdbc.url] not found - trying original name [jdbc.url]. javax.naming.NameNotFoundException: Name [jdbc.url] is not bound in this Context. Unable to find [jdbc.url].
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [jdbc.url]
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [jdbc.url] threw NamingException with message: Name [jdbc.url] is not bound in this Context. Unable to find [jdbc.url].. Returning null.
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'jdbc.url' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/jdbc.username]
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/jdbc.username] not found - trying original name [jdbc.username]. javax.naming.NameNotFoundException: Name [jdbc.username] is not bound in this Context. Unable to find [jdbc.username].
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [jdbc.username]
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [jdbc.username] threw NamingException with message: Name [jdbc.username] is not bound in this Context. Unable to find [jdbc.username].. Returning null.
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'jdbc.username' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.529 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/jdbc.password]
+2019-09-19 14:35:15.530 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/jdbc.password] not found - trying original name [jdbc.password]. javax.naming.NameNotFoundException: Name [jdbc.password] is not bound in this Context. Unable to find [jdbc.password].
+2019-09-19 14:35:15.530 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [jdbc.password]
+2019-09-19 14:35:15.530 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [jdbc.password] threw NamingException with message: Name [jdbc.password] is not bound in this Context. Unable to find [jdbc.password].. Returning null.
+2019-09-19 14:35:15.530 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'jdbc.password' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.530 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/redis.host]
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/redis.host] not found - trying original name [redis.host]. javax.naming.NameNotFoundException: Name [redis.host] is not bound in this Context. Unable to find [redis.host].
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [redis.host]
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [redis.host] threw NamingException with message: Name [redis.host] is not bound in this Context. Unable to find [redis.host].. Returning null.
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'redis.host' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/redis.port]
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/redis.port] not found - trying original name [redis.port]. javax.naming.NameNotFoundException: Name [redis.port] is not bound in this Context. Unable to find [redis.port].
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [redis.port]
+2019-09-19 14:35:15.531 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [redis.port] threw NamingException with message: Name [redis.port] is not bound in this Context. Unable to find [redis.port].. Returning null.
+2019-09-19 14:35:15.532 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'redis.port' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.532 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/redis.dbIndex]
+2019-09-19 14:35:15.532 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/redis.dbIndex] not found - trying original name [redis.dbIndex]. javax.naming.NameNotFoundException: Name [redis.dbIndex] is not bound in this Context. Unable to find [redis.dbIndex].
+2019-09-19 14:35:15.532 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [redis.dbIndex]
+2019-09-19 14:35:15.533 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [redis.dbIndex] threw NamingException with message: Name [redis.dbIndex] is not bound in this Context. Unable to find [redis.dbIndex].. Returning null.
+2019-09-19 14:35:15.533 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'redis.dbIndex' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.534 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/redis.maxTotal]
+2019-09-19 14:35:15.534 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/redis.maxTotal] not found - trying original name [redis.maxTotal]. javax.naming.NameNotFoundException: Name [redis.maxTotal] is not bound in this Context. Unable to find [redis.maxTotal].
+2019-09-19 14:35:15.534 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [redis.maxTotal]
+2019-09-19 14:35:15.535 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [redis.maxTotal] threw NamingException with message: Name [redis.maxTotal] is not bound in this Context. Unable to find [redis.maxTotal].. Returning null.
+2019-09-19 14:35:15.535 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'redis.maxTotal' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.535 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/redis.maxIdle]
+2019-09-19 14:35:15.535 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/redis.maxIdle] not found - trying original name [redis.maxIdle]. javax.naming.NameNotFoundException: Name [redis.maxIdle] is not bound in this Context. Unable to find [redis.maxIdle].
+2019-09-19 14:35:15.535 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [redis.maxIdle]
+2019-09-19 14:35:15.535 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [redis.maxIdle] threw NamingException with message: Name [redis.maxIdle] is not bound in this Context. Unable to find [redis.maxIdle].. Returning null.
+2019-09-19 14:35:15.535 [localhost-startStop-1] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'redis.maxIdle' in PropertySource 'localProperties' with value of type String
+2019-09-19 14:35:15.536 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2019-09-19 14:35:15.539 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2019-09-19 14:35:15.543 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2019-09-19 14:35:15.544 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2019-09-19 14:35:15.546 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'lifecycleBeanPostProcessor'
+2019-09-19 14:35:15.547 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2019-09-19 14:35:15.575 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'shiroFilter'
+2019-09-19 14:35:15.576 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-09-19 14:35:15.606 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'securityManager'
+2019-09-19 14:35:15.885 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'authenticator'
+2019-09-19 14:35:15.886 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'shiroRealm'
+2019-09-19 14:35:15.921 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userServiceImpl'
+2019-09-19 14:35:15.924 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userMapper'
+2019-09-19 14:35:15.933 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sqlSessionFactory'
+2019-09-19 14:35:15.934 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSource'
+2019-09-19 14:35:16.599 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis/mybatis.xml]'
+2019-09-19 14:35:16.731 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\DeptMapper.xml]'
+2019-09-19 14:35:16.746 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\DictDataMapper.xml]'
+2019-09-19 14:35:16.775 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\MenuMapper.xml]'
+2019-09-19 14:35:16.793 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\PostMapper.xml]'
+2019-09-19 14:35:16.805 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\RoleDeptMapper.xml]'
+2019-09-19 14:35:16.847 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\RoleMapper.xml]'
+2019-09-19 14:35:16.858 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\RoleMenuMapper.xml]'
+2019-09-19 14:35:16.881 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\UserMapper.xml]'
+2019-09-19 14:35:16.892 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\UserPostMapper.xml]'
+2019-09-19 14:35:16.903 [localhost-startStop-1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [D:\content_management_system\target\classes\mapper\UserRoleMapper.xml]'
+2019-09-19 14:35:16.947 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userPostMapper'
+2019-09-19 14:35:16.954 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userRoleMapper'
+2019-09-19 14:35:16.963 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'txAdvice'
+2019-09-19 14:35:16.968 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+2019-09-19 14:35:17.018 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [add*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [append*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [insert*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [save*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [update*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [modify*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [edit*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [delete*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [remove*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [repair] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [delAndRepair] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [get*] with attribute [PROPAGATION_SUPPORTS,ISOLATION_DEFAULT,readOnly]
+2019-09-19 14:35:17.019 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [find*] with attribute [PROPAGATION_SUPPORTS,ISOLATION_DEFAULT,readOnly]
+2019-09-19 14:35:17.022 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [load*] with attribute [PROPAGATION_SUPPORTS,ISOLATION_DEFAULT,readOnly]
+2019-09-19 14:35:17.022 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [search*] with attribute [PROPAGATION_SUPPORTS,ISOLATION_DEFAULT,readOnly]
+2019-09-19 14:35:17.022 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [datagrid*] with attribute [PROPAGATION_SUPPORTS,ISOLATION_DEFAULT,readOnly]
+2019-09-19 14:35:17.022 [localhost-startStop-1] DEBUG o.s.t.i.NameMatchTransactionAttributeSource - Adding transactional method [*] with attribute [PROPAGATION_SUPPORTS,ISOLATION_DEFAULT]
+2019-09-19 14:35:17.054 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'menuServiceImpl'
+2019-09-19 14:35:17.056 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'menuMapper'
+2019-09-19 14:35:17.062 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'roleMapper'
+2019-09-19 14:35:17.068 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'roleServiceImpl'
+2019-09-19 14:35:17.070 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userRoleServiceImpl'
+2019-09-19 14:35:17.086 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'roleMenuServiceImpl'
+2019-09-19 14:35:17.088 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'roleMenuMapper'
+2019-09-19 14:35:17.183 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'cacheManager'
+2019-09-19 14:35:17.192 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'redisTemplate'
+2019-09-19 14:35:17.218 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jedisConnectionFactory'
+2019-09-19 14:35:17.257 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'redisStandaloneConfiguration'
+2019-09-19 14:35:17.335 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jedisPoolConfig'
+2019-09-19 14:35:17.529 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'keySerializer'
+2019-09-19 14:35:17.533 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'valueSerializer'
+2019-09-19 14:35:17.604 [localhost-startStop-1] DEBUG org.apache.shiro.realm.AuthorizingRealm - No authorizationCache instance set.  Checking for a cacheManager...
+2019-09-19 14:35:17.604 [localhost-startStop-1] DEBUG org.apache.shiro.realm.AuthorizingRealm - CacheManager [amethyst.shiro.cache.RedisCacheManager@70ee5468] has been configured.  Building authorization cache named [shiroRealm.authorizationCache]
+2019-09-19 14:35:17.605 [localhost-startStop-1] DEBUG org.apache.shiro.spring.LifecycleBeanPostProcessor - Initializing bean [shiroRealm]...
+2019-09-19 14:35:17.668 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'authorizer'
+2019-09-19 14:35:17.676 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sessionManager'
+2019-09-19 14:35:17.764 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'simpleCookie'
+2019-09-19 14:35:17.795 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sessionValidationScheduler'
+2019-09-19 14:35:17.866 [localhost-startStop-1] DEBUG o.s.ui.context.support.UiApplicationContextUtils - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@706c4950]
+2019-09-19 14:35:17.868 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'deptServiceImpl'
+2019-09-19 14:35:17.869 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'deptMapper'
+2019-09-19 14:35:17.879 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dictDataServiceImpl'
+2019-09-19 14:35:17.880 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dictDataMapper'
+2019-09-19 14:35:17.896 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'postServiceImpl'
+2019-09-19 14:35:17.900 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'postMapper'
+2019-09-19 14:35:17.909 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'roleDeptServiceImpl'
+2019-09-19 14:35:17.911 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'roleDeptMapper'
+2019-09-19 14:35:17.919 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'permission'
+2019-09-19 14:35:18.090 [localhost-startStop-1] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userPostServiceImpl'
+2019-09-19 14:35:18.165 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+2019-09-19 14:35:18.166 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].
+2019-09-19 14:35:18.166 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+2019-09-19 14:35:18.167 [localhost-startStop-1] DEBUG org.springframework.jndi.JndiPropertySource - JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].. Returning null.
+2019-09-19 14:35:18.185 [localhost-startStop-1] DEBUG o.s.web.filter.HiddenHttpMethodFilter - Filter 'rest' configured for use
+2019-09-19 14:35:18.186 [localhost-startStop-1] DEBUG org.apache.shiro.spring.web.ShiroFilterFactoryBean - Creating Shiro Filter instance.
+2019-09-19 14:35:18.209 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/favicon.ico] from String definition [anon]
+2019-09-19 14:35:18.209 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/favicon.ico] to filter [anon] with config [null]
+2019-09-19 14:35:18.210 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/user/login] from String definition [anon]
+2019-09-19 14:35:18.210 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/user/login] to filter [anon] with config [null]
+2019-09-19 14:35:18.210 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/js/**] from String definition [anon]
+2019-09-19 14:35:18.210 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/js/**] to filter [anon] with config [null]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/css/**] from String definition [anon]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/css/**] to filter [anon] with config [null]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/fonts/**] from String definition [anon]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/fonts/**] to filter [anon] with config [null]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/img/**] from String definition [anon]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/img/**] to filter [anon] with config [null]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/sys/user/login] from String definition [kaptcha]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/sys/user/login] to filter [kaptcha] with config [null]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/captcha/captchaImage] from String definition [anon]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/captcha/captchaImage] to filter [anon] with config [null]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/sys/user/logout] from String definition [logout]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/sys/user/logout] to filter [logout] with config [null]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Creating chain [/**] from String definition [authc]
+2019-09-19 14:35:18.211 [localhost-startStop-1] DEBUG o.a.shiro.web.filter.mgt.DefaultFilterChainManager - Attempting to apply path [/**] to filter [authc] with config [null]
+2019-09-19 14:35:18.214 [localhost-startStop-1] DEBUG o.springframework.web.filter.DelegatingFilterProxy - Filter 'shiroFilter' configured for use
+2019-09-19 14:35:18.230 [localhost-startStop-1] DEBUG o.s.web.filter.CharacterEncodingFilter - Filter 'encodingFilter' configured for use

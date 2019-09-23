@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="amethyst.mapper.DictDataMapper">
+
+    <resultMap id="DictDataResult" type="DictData" >
+        <id column="dict_code" property="dictCode"/><!-- 字典编码 -->
+        <result column="dict_sort" property="dictSort"/><!-- 字典排序 -->
+        <result column="dict_label" property="dictLabel"/><!-- 字典标签 -->
+        <result column="dict_value" property="dictValue"/><!-- 字典键值 -->
+        <result column="dict_type" property="dictType"/><!-- 字典类型 -->
+        <result column="css_class" property="cssClass"/><!-- 样式属性（其他样式扩展） -->
+        <result column="list_class" property="listClass"/><!-- 表格回显样式 -->
+        <result column="is_default" property="isDefault"/><!-- 是否默认（Y是 N否） -->
+        <result column="status" property="status"/><!-- 状态（0正常 1停用） -->
+        <result column="create_by" property="createBy"/><!-- 创建者 -->
+        <result column="create_time" property="createTime"/><!-- 创建时间 -->
+        <result column="update_by" property="updateBy"/><!-- 更新者 -->
+        <result column="update_time" property="updateTime"/><!-- 更新时间 -->
+        <result column="remark" property="remark"/><!-- 备注 -->
+    </resultMap>
+
+    <sql id="selectDictDataVo">
+        select dict_code,dict_sort,dict_label,dict_value,dict_type,css_class,list_class,is_default,
+        status,create_by,create_time,update_by,update_time,remark from sys_dict_data
+    </sql>
+
+<!--    根据已有信息获取相应数据属性-->
+
+    <select id="selectDictDataList" parameterType="String" resultMap="DictDataResult">
+        <include refid="selectDictDataVo"/>
+       <where>
+           <if test="dictCode!=null">and dict_code=#{dictCode}</if>
+           <if test="dictSort!=null">and dict_sort=#{dictSort}</if>
+           <if test="dictLabel!=null and dictLabel!=''">and dict_label=#{dictLabel}</if>
+           <if test="dictValue!=null and dictValue!=''">and dict_value=#{dictValue}</if>
+           <if test="dictType!=null and dictType!=''">and dict_type=#{dictType}</if>
+           <if test="cssClass!=null and cssClass!=''">and css_class=#{cssClass}</if>
+           <if test="listClass!=null and listClass!=''">and list_class=#{listClass}</if>
+           <if test="isDefault!=null and isDefault!=''">and is_default=#{isDefault}</if>
+           <if test="status!=null and status!=''">and status=#{status}</if>
+           <if test="createBy!=null and createBy!=''">and create_by=#{createBy}</if>
+           <if test="createTime!=null">and create_time=#{createTime}</if>
+           <if test="updateBy!=null and updateBy!=''">and update_by=#{updateBy}</if>
+           <if test="updateTime!=null">and update_time=#{updateTime}</if>
+           <if test="remark!=null and remark!=''">and remark=#{remark}</if>
+       </where>
+    </select>
+
+</mapper>

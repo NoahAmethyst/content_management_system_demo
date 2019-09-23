@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--安全管理器 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!--        认证器-->
+        <property name="authenticator" ref="authenticator"/>
+        <!--        授权器-->
+        <property name="authorizer" ref="authorizer"/>
+        <!--        会话管理-->
+        <property name="sessionManager" ref="sessionManager"/>
+    </bean>
+
+    <!--    认证器-->
+    <bean id="authenticator" class="org.apache.shiro.authc.pam.ModularRealmAuthenticator">
+        <property name="realms">
+            <list>
+                <ref bean="shiroRealm"/>
+            </list>
+        </property>
+    </bean>
+
+    <!--    授权器-->
+    <bean id="authorizer" class="org.apache.shiro.authz.ModularRealmAuthorizer">
+        <property name="realms">
+            <list>
+                <ref bean="shiroRealm"/>
+            </list>
+        </property>
+    </bean>
+
+    <!--    会话管理-->
+    <bean id="sessionManager" class="amethyst.shiro.session.ShiroSessionManager">
+        <!--  服务器中session过期的时间,单位毫秒-->
+        <property name="globalSessionTimeout" value="1800000"/>
+
+        <property name="sessionFactory">
+            <bean class="amethyst.shiro.session.ShiroSessionFactory"/>
+        </property>
+
+        <!--  在客户存储设置-->
+        <property name="sessionIdCookie" ref="simpleCookie"/>
+        <!-- 服务器存储设置-->
+        <property name="sessionDAO">
+            <bean class="amethyst.shiro.dao.RedisSessionDAO"/>
+        </property>
+        <!--        会话验证-->
+        <property name="sessionValidationScheduler" ref="sessionValidationScheduler"/>
+        <!--        删除无效会话(会话停止,会话过期)-->
+        <property name="deleteInvalidSessions" value="true"/>
+    </bean>
+
+    <bean id="sessionValidationScheduler"
+          class="org.apache.shiro.session.mgt.ExecutorServiceSessionValidationScheduler">
+        <!--        毫秒-->
+        <property name="interval" value="1800000"/>
+        <property name="sessionManager" ref="sessionManager"/>
+    </bean>
+
+    <bean id="simpleCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+        <property name="name" value="sid"/>
+        <!--  单位是秒-->
+        <property name="maxAge" value="1800"/>
+        <property name="path" value="/"/>
+    </bean>
+
+    <!--    realm源-->
+    <bean id="shiroRealm" class="amethyst.shiro.realm.ShiroRealm">
+        <property name="name" value="shiroRealm"/>
+        <!--        密码加密算法和次数-->
+        <property name="credentialsMatcher">
+            <bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+                <property name="hashAlgorithmName" value="md5"/>
+                <property name="hashIterations" value="2"/>
+            </bean>
+        </property>
+<!--        缓存管理-->
+        <property name="cacheManager" ref="cacheManager"/>
+    </bean>
+
+    <!--    缓存管理器-->
+    <bean id="cacheManager" class="amethyst.shiro.cache.RedisCacheManager"/>
+
+
+
+    <!-- shiro生命周期交由给spring托管：固定写法  -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+
+    <!--   shiroFilter的Bean，要与shiro的过滤器名称一致-->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <!--        安全管理器-->
+        <property name="securityManager" ref="securityManager"/>
+        <!--        如果没有认证，则到此页面-->
+        <property name="loginUrl" value="/login.html"/>
+        <!--        认证成功之后，跳转的页面-->
+        <property name="successUrl" value="/success"/>
+        <!--        认证成功，访问未授权的页面，跳转的页面-->
+        <property name="unauthorizedUrl" value="/unauthorized"/>
+<!--            自定义过滤器    -->
+        <property name="filters">
+            <map>
+                <entry key="kaptcha">
+                    <bean class="amethyst.shiro.filter.KapchaFilter"/>
+                </entry>
+            </map>
+        </property>
+
+        <property name="filterChainDefinitions">
+            <value>
+                /favicon.ico = anon
+                /user/login = anon
+                /js/** = anon
+                /css/** = anon
+                /fonts/** = anon
+                /img/** = anon
+                /sys/user/login = kaptcha
+                /captcha/captchaImage = anon
+                /sys/user/logout = logout
+                /** = authc
+            </value>
+        </property>
+    </bean>
+</beans>
