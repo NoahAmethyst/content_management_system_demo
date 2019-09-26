@@ -27,7 +27,7 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("sys/user")
+@RequestMapping("/sys/user")
 @Slf4j
 public class UserController extends BaseController {
     @Autowired

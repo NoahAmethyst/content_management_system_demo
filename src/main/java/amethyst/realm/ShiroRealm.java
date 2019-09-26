@@ -55,6 +55,7 @@ public class ShiroRealm extends AuthorizingRealm {
         authorizationInfo.addRoles(roles);
         authorizationInfo.addStringPermissions(perms);
         return authorizationInfo;
+
     }
 
 

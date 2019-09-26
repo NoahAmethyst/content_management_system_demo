@@ -316,15 +316,19 @@
 <!--自定义js-->
 <script src="js/common.js"></script>
 
-<!--shiro内联js 要求必须在当前页面-->
-<!--[[]] 调用shiro内容-->
-<!--${@} 调用对象、方法-->
-<!--<script th:inline="javascript">-->
-<!--var editFlag=[[${@permission.hasPermi('sys:user:edit')}]];-->
-<!--var removeFlag=[[${@permission.hasPermi('sys:user:remove')}]];-->
-<!--</script>-->
+
 <script src="js/sys/user.js"></script>
 
 
 </body>
 </html>
+
+<!--&lt;!&ndash;-->
+<!--&lt;!&ndash;shiro内联js 要求必须在当前页面&ndash;&gt;-->
+<!--&lt;!&ndash;[[]] 调用shiro内容&ndash;&gt;-->
+<!--&lt;!&ndash;${@} 调用对象、方法&ndash;&gt;-->
+<!--<script th:inline="javascript">-->
+<!--    var editFlag=[[${@permission.hasPermi('sys:user:edit')}]];-->
+<!--    var removeFlag=[[${@permission.hasPermi('sys:user:remove')}]];-->
+<!--</script>-->
+<!--&ndash;&gt;-->

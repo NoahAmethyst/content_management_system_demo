@@ -7,9 +7,9 @@
 
 
     <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
-    depends-on="lifecycleBeanPostProcessor">
-    <property name="proxyTargetClass" value="true"></property>
-</bean>
+          depends-on="lifecycleBeanPostProcessor">
+        <property name="proxyTargetClass" value="true"></property>
+    </bean>
 
 
     <!-- 启用shiro注解：固定写法 -->
@@ -18,28 +18,24 @@
     <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
         <property name="securityManager" ref="securityManager"/>
     </bean>
-
     <!--    扫描包-->
     <context:component-scan base-package="amethyst.controller"/>
-
     <!--    请求适配器和请求映射器-->
     <mvc:annotation-driven/>
-   <!-- <mvc:annotation-driven conversion-service="conversionService">
-        <mvc:message-converters>
-            <ref bean="fastjsonBean"/>
-        </mvc:message-converters>
-    </mvc:annotation-driven>-->
-
-<!--   格式化  -->
-<!--    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
-<!--        <property name="converters">-->
-<!--            <list>-->
-<!--                <bean class="amethyst.convert.StringToDateConverter"/>-->
-<!--            </list>-->
-<!--        </property>-->
-<!--    </bean>-->
-
-<!--    消息转化-->
+    <!-- <mvc:annotation-driven conversion-service="conversionService">
+         <mvc:message-converters>
+             <ref bean="fastjsonBean"/>
+         </mvc:message-converters>
+     </mvc:annotation-driven>-->
+    <!--   格式化  -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="amethyst.convert.StringToDateConverter"/>
+            </list>
+        </property>
+    </bean>
+    <!--    消息转化-->
     <!--使用fastjson-->
     <!--<bean id="fastjsonBean" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
         <property name="supportedMediaTypes">
@@ -58,39 +54,38 @@
                     </list>
                 </property>
                <!-             出参-->
-<!--                <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>-->
-<!--            </bean>-->
-<!--        </property>-->
-<!--    </bean>-->
+    <!--                <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>-->
+    <!--            </bean>-->
+    <!--        </property>-->
+    <!--    </bean>-->
 
 
-<!--    &lt;!&ndash;   视图解析器&ndash;&gt;-->
+    <!--       视图解析器-->
 <!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
 <!--        <property name="prefix" value="/WEB-INF/pages/"/>-->
 <!--        <property name="suffix" value=".html"/>-->
 <!--    </bean>-->
+    <!--    thymeleaf 视图处理器配置-->
 
-    thymeleaf 视图处理器配置
-        <bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
-            <property name="prefix" value="/WEB-INF/templates/" />
-            <property name="suffix" value=".html" />
-            <property name="templateMode" value="HTML5" />
-            <property name="characterEncoding" value="UTF-8"/>
-        </bean>
-            <bean id="templateEngine"  class="org.thymeleaf.spring4.SpringTemplateEngine">
-                <property name="templateResolver" ref="templateResolver" />
-                <property name="additionalDialects">
-            <set>
-                    <bean class="at.pollux.thymeleaf.shiro.dialect.ShiroDialect"/>
-                </set>
-        </property>
-            </bean>
-            <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
-        <property name="templateEngine" ref="templateEngine" />
-        <property name="characterEncoding" value="UTF-8"/>
-    </bean>
-
-
+        <bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+            <constructor-arg ref="servletContext"/>
+            <property name="prefix" value="/WEB-INF/pages"/>
+            <property name="suffix" value=".html"/>
+            <property name="templateMode" value="HTML5"/>
+            <property name="characterEncoding" value="UTF-8"/>
+        </bean>
+        <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+            <property name="templateResolver" ref="templateResolver"/>
+            <property name="additionalDialects">
+                <set>
+                    <bean class="at.pollux.thymeleaf.shiro.dialect.ShiroDialect"/>
+                </set>
+            </property>
+        </bean>
+        <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+            <property name="templateEngine" ref="templateEngine"/>
+            <property name="characterEncoding" value="UTF-8"/>
+        </bean>
     <!--    静态资源-->
     <mvc:default-servlet-handler/>
     <mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
@@ -139,7 +134,4 @@
             </bean>
         </property>
     </bean>
-
-
-
 </beans>

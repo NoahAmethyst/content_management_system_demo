@@ -31,6 +31,7 @@ amethyst\shiro\session\ShiroSessionManager.class
 amethyst\vo\AjaxResult.class
 amethyst\controller\sys\DictDataController.class
 amethyst\service\PostServiceI.class
+amethyst\controller\sys\MenuController3.class
 amethyst\shiro\session\ShiroSession.class
 amethyst\shiro\session\ShiroSessionFactory.class
 amethyst\service\MenuServiceI.class
